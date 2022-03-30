@@ -9,7 +9,7 @@ const { METHODS } = require('http');
 const port = 3001;
 const idlen = 10;
 // place holder for the data
-let users = [];
+let users = [{id:1,name:"Sandeep",mobile:9559123391}];
 
 
 var corsOptions = {
