@@ -1,4 +1,4 @@
-import react from 'react'
+import React from 'react'
 export default function HeaderComponent() {
     return (
         <header className="p-3 bg-dark text-white">
