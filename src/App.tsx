@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.scss';
 import HeaderComponent from './components/HeaderComponent/HeaderComponent';
 import AddUserComponent from './components/AddUserComponent/AddUserComponent';
@@ -7,7 +7,9 @@ import axios from 'axios';
 
 function App() {
   const [users, setUsers] = useState([]);
-
+  useEffect(()=>{
+    listUsers();
+  },[])
   function listUsers() {
     axios.get('http://localhost:3001/api/getUsers').then((res: any) => {
       setUsers(res.data);
