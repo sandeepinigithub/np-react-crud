@@ -13,7 +13,7 @@ let users = [{id:1,name:"Sandeep",mobile:9559123391}];
 
 
 var corsOptions = {
-    origin: 'http://localhost:3000', //Angular default port
+    origin: 'http://localhost:3000', //set this default port
     optionsSuccessStatus: 200,// For legacy browser support
     methods: "GET, PUT,POST,DELETE"
 }

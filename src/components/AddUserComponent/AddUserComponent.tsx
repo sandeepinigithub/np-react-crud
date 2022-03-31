@@ -22,10 +22,11 @@ export default function AddUserComponent(props: any) {
         if (Object.keys(formErrors).length === 0 && isSubmit) {
             axios.post('http://localhost:3001/api/addUser', formValues).then((res: any) => {
                 console.log(res);
+                props.addUser();
+                setIsSubmit(false);
             }).catch((err: any) => {
                 console.log(err);
             });
-            props.addUser();
         }
     }, [formErrors])
     const validate = (values: any) => {

@@ -15,7 +15,6 @@ function App() {
       console.log(err);
     });
   }
-  listUsers();
   function addNewUser(){
     listUsers();
   }
