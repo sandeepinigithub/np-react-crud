@@ -1,21 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { json } from "stream/consumers";
 
-export default function ListUserComponent() {
-    const [users, setUsers] = useState([]);
-    useEffect(function () {
-        axios.get('http://localhost:3001/api/getUsers').then((res: any) => {
-            setUsers(res.data);
-        }).catch(err => {
-            console.log(err);
-        });
-    }, [])
+export default function ListUserComponent(props:any) {
+  
     return (
         <>
             <div className="container">
                 <div className="row">
-                    {users.map((item: any) => {
+                    {props.users.map((item: any) => {
                         return (<div key={item.id} className="card col-12 col-lg-3 col-md-4 col-sm-6 p-2 m-2">
                             <h5 className="card-header">{item.name}</h5>
                             <div className="card-body">

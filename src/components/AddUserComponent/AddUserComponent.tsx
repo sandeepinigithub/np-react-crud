@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 
 
-export default function AddUserComponent() {
+export default function AddUserComponent(props:any) {
     const [name, setName] = useState("");
     const [mobile, setMobile] = useState("");
     //Add User Function
@@ -21,6 +21,7 @@ export default function AddUserComponent() {
         }).catch((err: any) => {
             console.log(err);
         });
+        props.addUser();
     }
     //Form Reset
     function formReset(){
